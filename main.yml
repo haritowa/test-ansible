@@ -1,0 +1,6 @@
+---
+# This playbook deploys the whole nodes stack.
+
+- name: Example from an Ansible Playbook
+  hosts: localhost
+  ansible.builtin.ping:
