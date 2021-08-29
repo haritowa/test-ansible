@@ -1,6 +1,11 @@
 ---
 # This playbook deploys the whole nodes stack.
 
-- name: Example from an Ansible Playbook
+- name: apply common configuration to all nodes
   hosts: localhost
-  ansible.builtin.ping:
+  
+  tasks:
+    - name: Add terraform output to inventory
+      add_host:
+        host: 123.168.1.1
+        group: rizon
