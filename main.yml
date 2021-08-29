@@ -5,7 +5,19 @@
   hosts: localhost
   
   tasks:
-    - name: Add terraform output to inventory
+    - name: Add terraform output to inventory 1
       add_host:
         host: 123.168.1.1
         group: rizon
+        
+    - name: Add terraform output to inventory 2
+      add_host:
+        host: 123.161.1.1
+        group: rizon
+
+- name: Test Ping
+  hosts: rizon
+  
+  tasks:
+    - name: Add terraform output to inventory
+      ping:
